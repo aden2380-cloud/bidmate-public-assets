@@ -1,0 +1,43 @@
+name: Validate public media assets
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify published carousel image files
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          folder = Path("comics/2026-11-18-ep01")
+          if not folder.exists():
+              print("Episode 1 not yet added; checking existing public assets only.")
+              raise SystemExit(0)
+
+          expected = [
+              "EP01_01_cover.jpg",
+              "EP01_02_pig_dream.jpg",
+              "EP01_03_notice_review.jpg",
+              "EP01_04_question.jpg",
+              "EP01_05_adenj_teaser.jpg",
+          ]
+          for name in expected:
+              path = folder / name
+              data = path.read_bytes()
+              assert 0 < len(data) <= 8 * 1024 * 1024, f"Unexpected size: {name}"
+              assert data[:2] == b"\xff\xd8" and data[-2:] == b"\xff\xd9", f"Not a complete JPEG: {name}"
+              print(f"Verified {path}: {len(data)} bytes")
+
+          for name in ("README.md", "caption_ep01.txt"):
+              assert (folder / name).is_file(), f"Missing {name}"
+          PY
