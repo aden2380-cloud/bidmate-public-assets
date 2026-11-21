@@ -1,0 +1,56 @@
+{
+  "title": "BidMate 오늘도 입찰합니다 5화 — 과거 공고 복수예가 15개 분석",
+  "source_created_on": "2026-11-21",
+  "format": {
+    "resolution": "1080x1920",
+    "ratio": "9:16",
+    "fps": 24,
+    "scene_count": 5,
+    "scene_seconds": 1.5,
+    "total_seconds": 7.5,
+    "audio": "none",
+    "codec": "H.264"
+  },
+  "media_git_upload_status": "pending",
+  "note": "This commit only stores the verified media manifest, caption, and pinned comment. Media bytes remain in ChatGPT generated artifacts and have not yet been uploaded to GitHub. Do not mark release assets complete until verified.",
+  "media_files": [
+    {
+      "file": "BidMate_EP05_Reels_1080x1920_1p5s_FINAL.mp4",
+      "size_bytes": 1769724,
+      "sha256": "c50311c72df13d92bb86180a600a018bd09d2e1748f32fff882c04e9f979233d",
+      "type": "video/mp4",
+      "duration_seconds": 7.5,
+      "uploaded": false
+    },
+    {
+      "file": "BidMate_EP05_Reels_01_1080x1920.jpg",
+      "size_bytes": 767448,
+      "sha256": "cd00da2477777daccbd483bb1a6a8cee4a8a8a9d6fbaac4925ba2911cbf460d7",
+      "uploaded": false
+    },
+    {
+      "file": "BidMate_EP05_Reels_02_1080x1920.jpg",
+      "size_bytes": 812249,
+      "sha256": "24d85dcc3b8a11f1efa0389537289a4aa3cfafa954593b8b46660ad1efbe4859",
+      "uploaded": false
+    },
+    {
+      "file": "BidMate_EP05_Reels_03_1080x1920.jpg",
+      "size_bytes": 795601,
+      "sha256": "bb2317f55cda41c23a03b2be31a36edcb9d5833ff31257f06eae473200baede8",
+      "uploaded": false
+    },
+    {
+      "file": "BidMate_EP05_Reels_04_1080x1920.jpg",
+      "size_bytes": 822534,
+      "sha256": "0b69b775c4fb9f867fa6af5ae597a27251abce8e12812ef906d2b0ea8cd30628",
+      "uploaded": false
+    },
+    {
+      "file": "BidMate_EP05_Reels_05_1080x1920.jpg",
+      "size_bytes": 829106,
+      "sha256": "47cf1b70414c717c47ad5f6d30d4efbedf704c75b4138afbdccb5a1ffe3390f1",
+      "uploaded": false
+    }
+  ]
+}
